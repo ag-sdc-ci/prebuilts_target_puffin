@@ -1,0 +1,34 @@
+// Auto-generated prebuilt Blueprint for external/puffin
+// Extracted from Extractive APEX package: org.blisslabs.ag.ext.puffin
+
+package {
+    default_applicable_licenses: ["external_puffin_license"],
+}
+
+license {
+    name: "external_puffin_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-BSD",
+    ],
+    license_text: [
+        "LICENSE",
+    ],
+}
+
+cc_library_headers {
+    name: "libpuffin_headers",
+    vendor_available: true,
+    host_supported: true,
+    export_include_dirs: ["include"],
+}
+
+cc_prebuilt_library_shared {
+    name: "libpuffin",
+    vendor_available: true,
+    host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: ["include"],
+    srcs: ["lib/libpuffin.so"],
+    prefer: true,
+}
