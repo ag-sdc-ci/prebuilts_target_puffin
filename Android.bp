@@ -27,6 +27,7 @@ cc_prebuilt_library_shared {
     name: "libpuffin",
     vendor_available: true,
     host_supported: true,
+    recovery_available: true,
     check_elf_files: false,
     export_include_dirs: ["include"],
     srcs: ["lib/libpuffin.so"],
